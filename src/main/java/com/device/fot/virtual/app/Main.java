@@ -52,7 +52,7 @@ public class Main {
             String timeout = CLI.getTimeout(args)
                     .orElse("10000");
 
-            String deviceConduct = CLI.getDeviceConduct(args).orElse("0");
+            String deviceConduct = CLI.getDeviceConduct(args).orElse("1");
 
             BrokerSettings brokerSettings = BrokerSettingsBuilder
                     .builder()
