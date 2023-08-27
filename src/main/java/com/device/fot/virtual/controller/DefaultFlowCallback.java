@@ -51,6 +51,7 @@ public class DefaultFlowCallback implements MqttCallback {
                 sensor = (FoTSensor) device.getSensorBySensorId(tatuMessage.getTarget())
                         .orElse(NullFoTSensor.getInstance());
                 String jsonResponse = TATUWrapper.buildGetMessageResponse(device.getId(),
+                        String.valueOf(device.getConduct()),
                         sensor.getId(),
                         sensor.getCurrentValue());
 

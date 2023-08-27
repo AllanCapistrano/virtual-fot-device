@@ -24,8 +24,8 @@ public class FoTDevice extends Device {
     private boolean updating;
     private MqttCallback callback;
 
-    public FoTDevice(String name, List<Sensor> sensors) {
-        super(name, new Random().nextDouble(), new Random().nextDouble(), sensors);
+    public FoTDevice(String name, int conduct, List<Sensor> sensors) {
+        super(name, conduct, new Random().nextDouble(), new Random().nextDouble(), sensors);
         this.updating = false;
     }
 

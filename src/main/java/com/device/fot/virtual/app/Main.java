@@ -52,6 +52,8 @@ public class Main {
             String timeout = CLI.getTimeout(args)
                     .orElse("10000");
 
+            String deviceConduct = CLI.getDeviceConduct(args).orElse("0");
+
             BrokerSettings brokerSettings = BrokerSettingsBuilder
                     .builder()
                     .setBrokerIp(brokerIp)
@@ -72,7 +74,7 @@ public class Main {
                     .map(Sensor.class::cast)
                     .collect(toList());
 
-            FoTDevice device = new FoTDevice(deviceId, sensors);
+            FoTDevice device = new FoTDevice(deviceId, Integer.parseInt(deviceConduct), sensors);
             BrokerUpdateCallback callback = new BrokerUpdateCallback(device);
             callback.startUpdateBroker(brokerSettings, Long.parseLong(timeout), true);
             
