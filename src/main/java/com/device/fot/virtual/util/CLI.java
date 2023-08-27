@@ -6,7 +6,7 @@ import java.util.Optional;
 
 /**
  *
- * @author Uellington Damasceno
+ * @author Uellington Damasceno e Allan Capistrano
  */
 public class CLI {
 
@@ -32,6 +32,10 @@ public class CLI {
     
     public static Optional<String> getTimeout(String... args){
         return getArgInList("-to", args);
+    }
+    
+    public static Optional<String> getDeviceConduct(String... args){
+        return getArgInList("-cd", args);
     }
     
     public static boolean hasParam(String arg, String... args){
