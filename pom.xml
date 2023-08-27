@@ -24,15 +24,10 @@
             <version>20230618</version>
             <scope>compile</scope>
         </dependency>
-        <!-- <dependency>
-            <groupId>com.github.UellingtonDamasceno</groupId>
-            <artifactId>extended-tatu-wrapper</artifactId>
-            <version>main-SNAPSHOT</version>
-        </dependency> -->
         <dependency>
             <groupId>com.github.AllanCapistrano</groupId>
             <artifactId>extended-tatu-wrapper</artifactId>
-            <version>4b8dbd0199</version>
+            <version>de81154fd8</version>
         </dependency>
         <dependency>
             <groupId>info.picocli</groupId>
