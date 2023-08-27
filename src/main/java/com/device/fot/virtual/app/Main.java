@@ -54,6 +54,11 @@ public class Main {
 
             String deviceConduct = CLI.getDeviceConduct(args).orElse("1");
 
+            if (Integer.parseInt(deviceConduct) < 1 || Integer.parseInt(deviceConduct) > 5) {
+              deviceConduct = "1";
+              System.err.println("The deviceConduct is out of range [1 -> Honest, 2 -> Malicious, 3 -> Selfish, 4 -> Corrupt, 5 -> Disturbing]. So it's using the default value (1).");
+            }
+
             BrokerSettings brokerSettings = BrokerSettingsBuilder
                     .builder()
                     .setBrokerIp(brokerIp)
